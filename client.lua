@@ -9,7 +9,7 @@ Citizen.CreateThread(function()
             if DoesEntityExist(GetVehiclePedIsTryingToEnter(PlayerPedId())) then
             local veh = GetVehiclePedIsTryingToEnter(PlayerPedId())
             local lock = GetVehicleDoorLockStatus(veh)
-            local x = math.random(1,5) -- Taux de réussite des vols et carjack (Exemple : (1,2) = 50% / (1,5) = 20%) // (1,1) = disable 
+            local x = math.random(1,5) -- Taux de réussite des vols et carjack (Exemple : (1,2) = 50% / (1,5) = 20%) // (2,2) = disable 
                 
                 if lock == 7 then --Lock 7 = lock mais fracturable
                     if x ~= 1 then -- On recupère le random s'il différent de 1
