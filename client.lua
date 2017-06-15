@@ -14,10 +14,10 @@ Citizen.CreateThread(function()
                 if lock == 7 then --Lock 7 = lock mais fracturable
                     if x ~= 1 then -- On recupère le random s'il différent de 1
                     SetVehicleDoorsLocked(veh, 2) -- On lock en 2, impossible à fracturé
-                    SetHornEnabled(veh, true)
+                    StartVehicleAlarm(veh) -- déclanche l'alarme si active sur le véhicule
                     else
                     SetVehicleDoorsLocked(veh, 0) -- Si le randome est 1, on lock à 0, soit ouvert
-                    SetHornEnabled(veh, true)
+                    StartVehicleAlarm(veh) -- déclanche l'alarme si active sur le véhicule
                     end
                 end     
             local ped = GetPedInVehicleSeat(veh, -1)
